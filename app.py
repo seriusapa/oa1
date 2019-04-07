@@ -28,9 +28,9 @@ from linebot.models import (
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('/yosxSHOzpi6qgJYR5O+DXiXzbpOAPN+vg4Cm/1/rBeZwb4i2ECtHbTVrBOIyuU3EaNxM/H8eMz3yIrqki+Y1uiwZ5A5+E1+d8O00YkrhibrSvW8jtg7rU00T2CfLN8i4T/UXORLfnmvlNwbbfPbXAdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('W87tpLbjGorG1Oinv3DWM8XdNriJ2NsCmnos6VaI6D5obHTIM6NkC/UUMN24XdpAduwc5YDuFV45gQqRxVt3Ibu1O4CgRbCNJU+lru5RumhP0vYeFMgtycbiNOz3gQGwsNgGjXloAaqV1rj5S4ma0QdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
-handler = WebhookHandler('c4ed9f5d7d3fdcb54b89907ac355d037')
+handler = WebhookHandler('941b173d5a8b59b29b2bc1d00657f826')
 #-------------{ REMAKE }-------------#
 
 notes = {}
@@ -55,7 +55,7 @@ def callback():
 def handle_join(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='Type /help for command :D\n\nFollow My Creator To Ask Questions -_-\nhttps://line.me/ti/p/zIlrfDTGAo')) 
+        TextSendMessage(text='Hai, Saya Bot Loh ketik /help')) 
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
@@ -395,7 +395,7 @@ def handle_message(event):
         bsy = data['result'][0]['linktkn']
         bsyr = data['result'][0]['linkqr']
         tokenz[event.source.user_id]= bsy
-        message = TextSendMessage(text='「 ᴛʀɪᴏ ᴘᴇᴋᴏᴋ ʙᴏᴛs 」\nKlik Link Dibawah Ini Untuk Login Token Chrome\n'+bsyr)
+        message = TextSendMessage(text='「 Token 」\nKlik Link Dibawah Ini Untuk Login Token Chrome\n'+bsyr)
         line_bot_api.reply_message(event.reply_token, message)
     elif (text == '/iosipad') or (text == 'Iosipad'):
         url = requests.get("https://api.eater.pw/token?header=IOSIPAD")
@@ -403,7 +403,7 @@ def handle_message(event):
         bsy = data['result'][0]['linktkn']
         bsyr = data['result'][0]['linkqr']
         tokenz[event.source.user_id]= bsy
-        message = TextSendMessage(text='「 ᴛʀɪᴏ ᴘᴇᴋᴏᴋ ʙᴏᴛs 」\nKlik Link Dibawah Ini Untuk Login Token Iosipad\n'+bsyr)
+        message = TextSendMessage(text='「 Token 」\nKlik Link Dibawah Ini Untuk Login Token Iosipad\n'+bsyr)
         line_bot_api.reply_message(event.reply_token, message)
     elif (text == '/desktopmac') or (text == 'Desktopmac'):
         url = requests.get("https://api.eater.pw/token?header=DESKTOPMAC")
@@ -411,7 +411,7 @@ def handle_message(event):
         bsy = data['result'][0]['linktkn']
         bsyr = data['result'][0]['linkqr']
         tokenz[event.source.user_id]= bsy
-        message = TextSendMessage(text='「 ᴛʀɪᴏ ᴘᴇᴋᴏᴋ ʙᴏᴛs 」\nKlik Link Dibawah Ini Untuk Login Token Desktopmac\n'+bsyr)
+        message = TextSendMessage(text='「 Token 」\nKlik Link Dibawah Ini Untuk Login Token Desktopmac\n'+bsyr)
         line_bot_api.reply_message(event.reply_token, message)
     elif (text == '/desktopwin') or (text == 'Desktopwin'):
         url = requests.get("https://api.eater.pw/token?header=DESKTOPWIN")
@@ -419,7 +419,7 @@ def handle_message(event):
         bsy = data['result'][0]['linktkn']
         bsyr = data['result'][0]['linkqr']
         tokenz[event.source.user_id]= bsy
-        message = TextSendMessage(text='「 ᴛʀɪᴏ ᴘᴇᴋᴏᴋ ʙᴏᴛs 」\nKlik Link Dibawah Ini Untuk Login Token Desktopwin\n'+bsyr)
+        message = TextSendMessage(text='「 Token 」\nKlik Link Dibawah Ini Untuk Login Token Desktopwin\n'+bsyr)
         line_bot_api.reply_message(event.reply_token, message)
     elif (text == '/win10') or (text == 'Win10'):
         url = requests.get("https://api.eater.pw/token?header=WIN10")
@@ -427,7 +427,7 @@ def handle_message(event):
         bsy = data['result'][0]['linktkn']
         bsyr = data['result'][0]['linkqr']
         tokenz[event.source.user_id]= bsy
-        message = TextSendMessage(text='「 ᴛʀɪᴏ ᴘᴇᴋᴏᴋ ʙᴏᴛs 」\nKlik Link Dibawah Ini Untuk Login Token Win10\n'+bsyr)
+        message = TextSendMessage(text='「 Token 」\nKlik Link Dibawah Ini Untuk Login Token Win10\n'+bsyr)
         line_bot_api.reply_message(event.reply_token, message)
     elif (text == '/clova') or (text == 'Clova'):
         url = requests.get("https://api.eater.pw/token?header=CLOVAFRIENDS")
@@ -448,7 +448,7 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
             alt_text='Help message',
             template=ButtonsTemplate(
-                thumbnail_image_url='https://media.giphy.com/media/OpMk33frgcs4o/giphy.gif',
+                thumbnail_image_url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJBo3hb0jqdSFg4pqFaNxnE2T9ixwB2AUYW_eHIsoqV0yqSpw',
                 title='HELP COMMAND',
                 text= 'Select one menu',
                 align= 'center',
@@ -467,7 +467,7 @@ def handle_message(event):
                     ),
                     MessageTemplateAction(
                         label='About',
-                        text='TRIO PEKOK BOTS\nVERSION BETA TEST\n\nTHANKS TO :\n1. ALLAH SWT\n2. KAWAN KAWAN SEMUA\n3. PARA HATTERS\n4. PARA MANTAN\n5. PARA MUSUH\nTHANK YOU FOR ALL\nTANPA KALIAN AKU BUKAN APA APA\n\nSUPPORT BY :\n1.PASUKAN GAGAL MOVE ON\n2. NF BOTS\n3. PEKOK BOTS\n\nCONTACT ME :\nhttps://line.me/ti/p/zIlrfDTGAo'
+                        text='JOKER NIGHT\nVERSION BETA TEST\n\nTHANKS TO :\n1. ALLAH SWT\n2. KAWAN KAWAN SEMUA\n3. PARA HATTERS\n4. PARA MANTAN\n5. PARA MUSUH\nTHANK YOU FOR ALL\nTANPA KALIAN AKU BUKAN APA APA\n\nSUPPORT BY :\n1.PASUKAN GAGAL MOVE ON\n2. NF BOTS\n3. PEKOK BOTS\n\nCONTACT ME :\nhttps://line.me/ti/p/situ.sehat'
                     )
                 ]
             )
@@ -687,7 +687,7 @@ def handle_message(event):
                         actions=[
                             URITemplateAction(
                                 label='>Tap the Button<',
-                                uri='https://line.me/ti/p/zIlrfDTGAo'
+                                uri='https://line.me/ti/p/~situ.sehat'
                             )
                         ]
                     ),
@@ -699,7 +699,7 @@ def handle_message(event):
                         actions=[
                             URITemplateAction(
                                 label='>Tap the Button<',
-                                uri='https://line.me/ti/p/buz6KFKzad'
+                                uri='https://line.me/ti/p/~situ.sehat'
                             )
                         ]
                     ),
@@ -711,7 +711,7 @@ def handle_message(event):
                         actions=[
                             URITemplateAction(
                                 label='>Tap the Button<',
-                                uri='http://line.me/ti/p/%40swv6521a'
+                                uri='https://line.me/ti/p/~situ.sehat'
                             )
                         ]
                     ),
@@ -1069,7 +1069,7 @@ def handle_message(event):
                         actions=[
                             URITemplateAction(
                                 label='>Tap the Button<',
-                                uri='https://line.me/ti/p/zIlrfDTGAo'
+                                uri='https://line.me/ti/p/~situ.sehat'
                             )
                         ]
                     ),
@@ -1086,7 +1086,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/21831487/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1142,7 +1142,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/18423382/IOS/sticker.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1170,7 +1170,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/9756022/IOS/sticker.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1184,7 +1184,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/8683557/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1198,7 +1198,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/12860202/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1212,7 +1212,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24200512/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1254,7 +1254,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/22499899/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1268,7 +1268,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89691708/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1282,7 +1282,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24200499/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1296,7 +1296,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24464008/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1310,7 +1310,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24186952/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1436,7 +1436,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89547155/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1506,7 +1506,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24464015/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1534,7 +1534,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/22220762/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1828,7 +1828,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/12521475/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1842,7 +1842,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24200512/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1856,7 +1856,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/14038588/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1870,7 +1870,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24186956/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1884,7 +1884,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/15666186/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1898,7 +1898,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89547152/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1912,7 +1912,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89691717/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1926,7 +1926,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24200511/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1940,7 +1940,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89547171/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1954,7 +1954,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/11866860/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1968,7 +1968,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89691710/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1982,7 +1982,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/24186955/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -1996,7 +1996,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/89547158/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
@@ -2010,7 +2010,7 @@ def handle_message(event):
                 columns=[
                     ImageCarouselColumn(
                         image_url='https://stickershop.line-scdn.net/stickershop/v1/sticker/23581910/IOS/sticker_animation@2x.png',
-                        action=URIAction(uri='https://line.me/ti/p/zIlrfDTGAo')
+                        action=URIAction(uri='https://line.me/ti/p/~situ.sehat')
                     )
                 ]
             )
