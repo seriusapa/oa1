@@ -28,9 +28,9 @@ from linebot.models import (
 app = Flask(__name__)
 
 # Channel Access Token
-line_bot_api = LineBotApi('W87tpLbjGorG1Oinv3DWM8XdNriJ2NsCmnos6VaI6D5obHTIM6NkC/UUMN24XdpAduwc5YDuFV45gQqRxVt3Ibu1O4CgRbCNJU+lru5RumhP0vYeFMgtycbiNOz3gQGwsNgGjXloAaqV1rj5S4ma0QdB04t89/1O/w1cDnyilFU=')
+line_bot_api = LineBotApi('XeCyvX9PLLCk74SS39QjZmFAbN+bX9w9/xKPNQUGb/QBTQAof5rwXEc3GepL49Pnduwc5YDuFV45gQqRxVt3Ibu1O4CgRbCNJU+lru5Rumj3UCxDLTdZ+WTGDe0miSP3pOC10BK8ryrK04dQ/E55lQdB04t89/1O/w1cDnyilFU=')
 # Channel Secret
-handler = WebhookHandler('941b173d5a8b59b29b2bc1d00657f826')
+handler = WebhookHandler('492b626c089d6b3ee86f6040bd6de238')
 #-------------{ REMAKE }-------------#
 
 notes = {}
@@ -55,7 +55,7 @@ def callback():
 def handle_join(event):
     line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='Hai, Saya Bot Loh ketik /help')) 
+        TextSendMessage(text='Hai Saya Bot Loh ketik /help')) 
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_text_message(event):
